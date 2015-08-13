@@ -1,0 +1,160 @@
+.list_data { 
+	margin-bottom: 2rem 
+}
+body{
+	margin: 0;
+	overflow-y: scroll; 
+}
+
+table, th, td { 
+	border: 1px solid #AAA 
+}
+
+th { 
+	cursor: pointer 
+}
+
+td{
+    text-align: center;
+    padding: 5px;
+}
+
+input{
+      margin: 5px;
+}
+
+center{
+	border:1px solid black;
+	padding:25px;
+	padding-top: 0;
+	margin:auto;
+	margin-bottom: 50px;
+}
+
+table{
+	margin: auto;
+	margin-top: 50px;
+}
+th{
+	padding:5px;
+	width: 250px;
+	color: white;
+	background-color: #A7C942;
+}
+th:first-child{
+	width:auto;
+	min-width: 50px;
+}
+tr:nth-child(even) {background: #FFF}
+tr:nth-child(odd) {background: #EAF2D3}
+label{
+	font-weight: bold;
+	line-height: 2;
+}
+
+form{
+	width: auto;
+	display: inline-block;
+	text-align: left;
+}
+
+.field{
+	overflow: hidden;
+}
+.field input{
+	float: right;
+}
+.action{
+	text-align: center;
+	padding: 30px;
+}
+#logo_img{
+	width: 80px;
+	display: inline-block;
+	vertical-align: middle;
+}
+#logo_title{
+	display: inline-block;
+}
+#nav_bar{
+	list-style-type: none;
+	padding: 0;
+}
+#nav_bar li{
+	display: inline-block;
+	cursor: pointer;
+	padding: 5px;
+	outline: 1px solid black;
+	margin-right: 10px;
+}
+#nav_bar li:hover{
+	background-color: #EAF2D3;
+}
+#nav_bar li:active{
+	background-color: #EAF2D3;
+	color:white;
+}
+/*#add_data_section{
+	display: none;
+}*/
+header{
+	background-color: #A7C942;
+	padding-left: 10px;
+	margin-bottom: 25px;
+}
+
+footer{
+	bottom: 0;
+	background-color: #A7C942;
+	text-align: left;
+	width: 100%;
+	padding: 10px;
+	position: fixed;
+
+}
+footer p em{
+	color: white;
+}
+nav{
+	padding-left: 30px;
+}
+#delete_btn_mobile{
+	display: none;
+}
+#edit_btn{
+	display: inline-block;
+	margin-left: 5px;
+}
+.edit_btn{
+	margin:5px;
+}
+@media screen and (max-width:768px){
+	#logo_wrap{
+		text-align: center;
+	}
+}
+@media screen and (max-width:400px){
+	#anchor1{
+		padding: 2%;
+	}
+	#logo_title{
+		display: none;
+	}
+	nav{
+		text-align: center;
+	}
+	footer{
+		text-align: center;
+	}
+}
+@media screen and (max-width:365px){
+	#delete_btn{
+		display: none;
+	}
+	#delete_btn_mobile{
+		display: inline-block;
+	}
+	.status_mobile{
+		display: none;
+	}
+}

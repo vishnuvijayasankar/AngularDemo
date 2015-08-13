@@ -1,0 +1,22 @@
+<div>
+<h1>Add Data</h1>
+        <form>
+            <div class="field">
+                <label for="state">Item: </label>
+                <input id="state" type="text" placeholder="Item"  ng-model="records.newState">
+            </div>
+            <div class="field">
+                <label for="price">Price: </label>
+                <input id="price" type="number" placeholder="Price" min="0" ng-model="records.newPrice">
+            </div>
+            <div class="field">
+                <label for="tax">Tax: </label>
+                <input id="tax" type="number" placeholder="Tax" min="0" ng-model="records.newTax">
+            </div>
+            <div class="action">
+                <button ng-hide="edit" type="submit" ng-click="Add()">Add</button>
+                <button ng-show = "edit" ng-click="Update()">Update</button>
+                <!-- <button ng-click="Reset()">Reset</button> -->
+            </div>
+        </form>
+    </div>

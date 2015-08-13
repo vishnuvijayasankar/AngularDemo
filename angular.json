@@ -1,0 +1,14 @@
+[
+    {
+        "state": "Apple",
+        "price": 22,
+        "tax": 5,
+        "include": false
+    },
+    {
+        "state": "Orange",
+        "price": 32,
+        "tax": 8,
+        "include": false
+    }
+]

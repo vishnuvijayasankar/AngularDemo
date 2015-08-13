@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html ng-app="RecordCtrlApp">
+<head>
+<title>Add / List Data</title>
+<link rel="stylesheet" type="text/css" href="angular.css">
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.7/angular.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.7/angular-route.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script src="angular_demo.js" ></script>
+</head>
+  
+<body ng-controller="RecordCtrl">
+<header>
+<div id="logo_wrap">
+<img id="logo_img" src="angular.png">
+<h1 id="logo_title">AngularJS Demo</h1>
+</div>
+</header>
+<nav>
+    <ul id="nav_bar">
+        <li id="list_data_btn" ng-click="Hide()" >List Data</li>
+        <li id="add_data_btn" ng-click="Show()">Add Data</li>
+    </ul>
+</nav>
+<div >
+    <center id="anchor1" class="list_data" >
+        <h1>List Data</h1>
+        <table>
+            <tr>
+                <th ng-click="type = 'include'; reverse = !reverse" class="status_mobile">Status</th>
+                <th ng-click="type = 'state'; reverse = !reverse">Item</th>
+                <th ng-click="type = 'price'; reverse = !reverse">Price</th>
+                <th ng-click="type = 'tax'; reverse = !reverse">Tax</th>
+                <th>Action</th>
+            </tr>
+            <tr ng-repeat="record in records | orderBy:type:reverse">
+                <td class="status_mobile"><input type="checkbox" ng-model="record.include"></td>
+                <td>{{record.state | uppercase}}</td>
+                <td>{{record.price | currency:"&#8377;" }}</td>
+                <td>{{record.tax | currency:"&#8377;" }}</td>
+                <td><button ng-click="Delete($index)" id="delete_btn">Delete</button><button ng-click="Delete($index)" id="delete_btn_mobile">(-)</button><button class="edit_btn" ng-click="Edit($index)">Edit</button></td>
+            </tr>
+            <tr>
+                <td colspan="2">Total</td>
+                <td>{{Totals().price | currency:"&#8377;" }}</td>
+                <td>{{Totals().tax | currency:"&#8377;" }}</td>
+                <td class="status_mobile">&nbsp;</td>
+            </tr>
+        </table>
+        <button style="margin-top: 20px;" ng-show="history.length > 0" ng-click="Undo()">Undo Delete</button>
+    </center>
+  
+    <center id="anchor2" class="add_data" ng-include="'add_data.html'" ng-show="tab">
+    </center>
+</div>
+<footer>
+    <p>
+        <b>Created By: <em>Vishnu Vijayasankar</em></b>
+    </p>
+</footer>
+</body>
+</html>
